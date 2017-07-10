@@ -1,6 +1,6 @@
 <template>
     <v-card>
-        <v-card-media class="black--text" src="/colorful.jpeg" height="200px">
+        <v-card-media class="black--text" src="/docks.jpeg" height="200px">
         </v-card-media>
         <v-card-title>
             <h1 class="title">Laravel tenancy</h1><br>

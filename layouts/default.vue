@@ -26,11 +26,11 @@
                                     </v-list-tile-avatar>
                                     <v-list-tile-content>
                                         <v-list-tile-title>GitHub</v-list-tile-title>
-                                        <v-list-tile-sub-title>Code & issues.</v-list-tile-sub-title>
+                                        <v-list-tile-sub-title>Contribute. View code & support issues.</v-list-tile-sub-title>
                                     </v-list-tile-content>
                                 </v-list-tile>
 
-                                <v-list-tile v-for="item in structure">
+                                <v-list-tile v-for="item in structure" v-bind:key="item.title">
                                     <v-list-tile-content>
                                         <v-list-tile-title>{{ item.title }}</v-list-tile-title>
                                     </v-list-tile-content>
@@ -52,7 +52,9 @@
         methods: {
             structure: function() {
 
-                console.log(this.$route());
+                console.log(this.$route);
+
+                return [];
             }
         }
     }
