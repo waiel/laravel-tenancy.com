@@ -1,0 +1,22 @@
+
+@require '~vuetify/src/stylus/settings/_colors.styl'
+
+$body-font-family := 'Lato', sans-serif
+
+$theme := {
+  primary: $deep-orange.darken-4
+  accent: $deep-orange.base
+  secondary: #165176
+  info: $blue.base
+  warning: $amber.base
+  error: $red.accent-2
+  success: $green.base
+}
+
+// Import Vuetify styling
+@require '~vuetify/src/stylus/main.styl'
+
+.logo-home-icon
+    width: 30px
+    height: 30px
+    color: $theme.secondary
