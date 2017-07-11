@@ -1,5 +1,15 @@
 <template>
     <div>
+        <h6>Use cases</h6>
+
+        <p>
+            Hyn tenancy is meant to quickly develop a multi tenant, SaaS-like app by providing
+            a stable code base with unobtrusiveness, flexibility, scalability and security in
+            mind. This package is by no means sufficient by itself. A developer will need
+            to implement the package into a Laravel code base that handles the app specific
+            logic and triggers tenant mutations.
+        </p>
+
         <h6>Core principles</h6>
 
         <p>

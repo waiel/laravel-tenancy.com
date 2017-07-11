@@ -16,6 +16,55 @@
                 Suitable for marketing companies that like to re-use functionality for different clients or start-ups building the next software as a service.
             </p>
         </v-card-text>
+
+        <v-list two-line subheader class="info">
+            <v-subheader class="secondary">Separation of data</v-subheader>
+            <v-list-tile avatar class="info">
+                <v-list-tile-avatar>
+                    <v-icon mdi>database</v-icon>
+                </v-list-tile-avatar>
+                <v-list-tile-content>
+                    <v-list-tile-title>Database</v-list-tile-title>
+                    <v-list-tile-sub-title>Split tenant data in separate databases, use prefixes or implement your own separation.</v-list-tile-sub-title>
+                </v-list-tile-content>
+            </v-list-tile>
+            <v-list-tile avatar class="info">
+                <v-list-tile-avatar>
+                    <v-icon mdi>settings</v-icon>
+                </v-list-tile-avatar>
+                <v-list-tile-content>
+                    <v-list-tile-title>Config</v-list-tile-title>
+                    <v-list-tile-sub-title>Override or add specific config settings.</v-list-tile-sub-title>
+                </v-list-tile-content>
+            </v-list-tile>
+            <v-list-tile avatar class="info">
+                <v-list-tile-avatar>
+                    <v-icon mdi>routes</v-icon>
+                </v-list-tile-avatar>
+                <v-list-tile-content>
+                    <v-list-tile-title>Routes</v-list-tile-title>
+                    <v-list-tile-sub-title>Apply tenant specific routes and/or re-use global application routes.</v-list-tile-sub-title>
+                </v-list-tile-content>
+            </v-list-tile>
+            <v-list-tile avatar class="info">
+                <v-list-tile-avatar>
+                    <v-icon mdi>translate</v-icon>
+                </v-list-tile-avatar>
+                <v-list-tile-content>
+                    <v-list-tile-title>Translations</v-list-tile-title>
+                    <v-list-tile-sub-title>Read additional translation files from the tenant trans directory.</v-list-tile-sub-title>
+                </v-list-tile-content>
+            </v-list-tile>
+            <v-list-tile avatar class="info">
+                <v-list-tile-avatar>
+                    <v-icon mdi>layers</v-icon>
+                </v-list-tile-avatar>
+                <v-list-tile-content>
+                    <v-list-tile-title>Vendor</v-list-tile-title>
+                    <v-list-tile-sub-title>Reads additional code in a tenant vendor directory, fully composer compatible.</v-list-tile-sub-title>
+                </v-list-tile-content>
+            </v-list-tile>
+        </v-list>
     </v-card>
 </template>
 <script>

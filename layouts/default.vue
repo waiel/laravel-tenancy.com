@@ -6,8 +6,8 @@
                     <v-flex xs8>
                         <nuxt/>
                     </v-flex>
-                    <v-flex xs4>
-                        <v-card>
+                    <v-flex xs4 class="sideMenu">
+                        <v-card class="grey lighten-4">
                             <v-toolbar flat dense card>
                                 <img src="https://avatars0.githubusercontent.com/u/14941148?v=3&s=30" />
                                 <v-spacer></v-spacer>
@@ -15,30 +15,25 @@
                                     hyn/multi-tenant
                                 </v-toolbar-title>
                                 <v-spacer></v-spacer>
-                                <!--<v-btn icon>-->
-                                    <!--<v-icon mdi>dots-horizontal</v-icon>-->
-                                <!--</v-btn>-->
+                                <v-chip label class="info">3.x</v-chip>
                             </v-toolbar>
                             <v-list dense class="grey lighten-4">
                                 <li>
                                     <v-btn flat nuxt exact to="/">
                                         <v-icon mdi>home</v-icon>
                                     </v-btn>
-                                    <v-btn flat tag="a" href="https://github.com/hyn/multi-tenant" target="_blank">
+                                    <v-btn v-tooltip:bottom="{html: 'View code and issues on GitHub.'}" flat tag="a" href="https://github.com/hyn/multi-tenant" target="_blank">
                                         <v-icon mdi>github-box</v-icon>
                                     </v-btn>
-                                    <v-btn flat tag="a" href="https://patreon.com/tenancy" target="_blank">
+                                    <v-btn v-tooltip:bottom="{html: 'Keep this package free, support it!'}" flat tag="a" href="https://patreon.com/tenancy" target="_blank">
                                         <img src="/patreon.svg" type="image/svg+xml" width="24px" />
                                     </v-btn>
-                                    <v-btn flat tag="a" href="https://confirmsubscription.com/h/i/DB343D4781A9960C" target="_blank">
+                                    <v-btn v-tooltip:bottom="{html: 'Newsletter, occasional progress updates.'}" flat tag="a" href="https://confirmsubscription.com/h/i/DB343D4781A9960C" target="_blank">
                                         <v-icon mdi>email-alert</v-icon>
                                     </v-btn>
                                 </li>
                             </v-list>
-                        </v-card>
-                        <v-spacer></v-spacer>
-                        <v-card>
-                            <v-list dense>
+                            <v-list dense class="grey lighten-4">
                                 <v-list-group v-for="route in routes" v-bind:key="route.title" nuxt :to="route.to">
                                     <v-list-tile slot="item">
                                         <v-list-tile-action>
@@ -51,7 +46,7 @@
                                             <v-icon>keyboard_arrow_down</v-icon>
                                         </v-list-tile-action>
                                     </v-list-tile>
-                                    <v-list-tile v-for="sub in route.subs" v-bind:key="sub.title" nuxt :to="sub.to ? (route.to + sub.to) : null" :href="sub.href" :target="sub.href ? '_blank' : '_self'">
+                                    <v-list-tile class="grey lighten-4" v-for="sub in route.subs" v-bind:key="sub.title" nuxt :to="sub.to ? (route.to + sub.to) : null" :href="sub.href" :target="sub.href ? '_blank' : '_self'">
                                         <v-list-tile-action>
                                             <v-icon mdi>{{ sub.mdi }}</v-icon>
                                         </v-list-tile-action>
@@ -95,10 +90,44 @@
                                 to: "/concept"
                             },
                             {
-                                title: "Implementation",
+                                title: "Use",
                                 description: "The quick start guide.",
                                 mdi: "worker",
-                                to: "/implementation"
+                                to: "/use"
+                            },
+                            {
+                                title: "Extend",
+                                description: "Build additional functionality.",
+                                mdi: "creation",
+                                to: "/extend"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Connect",
+                        mdi: "account-network",
+                        subs: [
+                            {
+                                title: "Newsletter",
+                                description: "Occasional progress updates.",
+                                mdi: "email-alert",
+                                href: "https://confirmsubscription.com/h/i/DB343D4781A9960C"
+                            },
+                            {
+                                title: "Patreon community",
+                                description: "Keep this package free, support it!",
+                                mdi: "comment-text",
+                                href: "https://patreon.com/tenancy/community"
+                            },
+                            {
+                                title: "Twitter",
+                                mdi: "twitter",
+                                href: "https://twitter.com/luceos"
+                            },
+                            {
+                                title: "LinkedIn",
+                                mdi: "linkedin",
+                                href: "https://linkedin.com/in/luceos"
                             }
                         ]
                     }
