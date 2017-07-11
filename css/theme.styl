@@ -4,7 +4,7 @@
 $body-font-family := 'Lato', sans-serif
 
 $theme := {
-  primary: $deep-orange.darken-4
+  primary: #bf1e2e
   accent: $deep-orange.base
   secondary: #165176
   info: $blue.base
@@ -13,6 +13,7 @@ $theme := {
   success: $green.base
 }
 
+
 // Import Vuetify styling
 @require '~vuetify/src/stylus/main.styl'
 
@@ -20,3 +21,6 @@ $theme := {
     width: 30px
     height: 30px
     color: $theme.secondary
+
+h6:not(:first-child)
+    margin-top: 1.5em

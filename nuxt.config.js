@@ -16,10 +16,13 @@ module.exports = {
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato' }
         ]
     },
-    plugins: ['~plugins/vuetify'],
+    plugins: ['~plugins/vuetify', '~plugins/highlight.js'],
     css: [
         { src: join(__dirname, 'css/app.styl'), lang: 'styl' },
         { src: join(__dirname, 'node_modules/mdi/css/materialdesignicons.css')}
     ],
-    cache: true
+    cache: true,
+    loading: {
+        color: "#bf1e2e"
+    }
 }
