@@ -19,7 +19,7 @@
 
         <v-list two-line subheader class="info">
             <v-subheader class="secondary">Separation of data</v-subheader>
-            <v-list-tile avatar class="info">
+            <v-list-tile avatar class="info" nuxt to="/documentation/use">
                 <v-list-tile-avatar>
                     <v-icon mdi>database</v-icon>
                 </v-list-tile-avatar>
@@ -28,7 +28,7 @@
                     <v-list-tile-sub-title>Split tenant data in separate databases, use prefixes or implement your own separation.</v-list-tile-sub-title>
                 </v-list-tile-content>
             </v-list-tile>
-            <v-list-tile avatar class="info">
+            <v-list-tile avatar class="info" nuxt to="/documentation/use">
                 <v-list-tile-avatar>
                     <v-icon mdi>settings</v-icon>
                 </v-list-tile-avatar>
@@ -37,7 +37,7 @@
                     <v-list-tile-sub-title>Override or add specific config settings.</v-list-tile-sub-title>
                 </v-list-tile-content>
             </v-list-tile>
-            <v-list-tile avatar class="info">
+            <v-list-tile avatar class="info" nuxt to="/documentation/use">
                 <v-list-tile-avatar>
                     <v-icon mdi>routes</v-icon>
                 </v-list-tile-avatar>
@@ -46,7 +46,7 @@
                     <v-list-tile-sub-title>Apply tenant specific routes and/or re-use global application routes.</v-list-tile-sub-title>
                 </v-list-tile-content>
             </v-list-tile>
-            <v-list-tile avatar class="info">
+            <v-list-tile avatar class="info" nuxt to="/documentation/use">
                 <v-list-tile-avatar>
                     <v-icon mdi>translate</v-icon>
                 </v-list-tile-avatar>
@@ -55,7 +55,7 @@
                     <v-list-tile-sub-title>Read additional translation files from the tenant trans directory.</v-list-tile-sub-title>
                 </v-list-tile-content>
             </v-list-tile>
-            <v-list-tile avatar class="info">
+            <v-list-tile avatar class="info" nuxt to="/documentation/use">
                 <v-list-tile-avatar>
                     <v-icon mdi>layers</v-icon>
                 </v-list-tile-avatar>

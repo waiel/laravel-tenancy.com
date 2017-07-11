@@ -33,7 +33,7 @@
                                 </v-btn>
                             </div>
                             <v-list dense class="grey lighten-4">
-                                <v-list-group v-for="route in routes" v-bind:key="route.title" nuxt :to="route.to">
+                                <v-list-group v-for="route in routes" :value="$route.path.startsWith(route.to)" v-bind:key="route.title" nuxt :to="route.to">
                                     <v-list-tile slot="item">
                                         <v-list-tile-action>
                                             <v-icon mdi>{{ route.mdi }}</v-icon>

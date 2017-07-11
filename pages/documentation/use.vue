@@ -50,5 +50,30 @@ app(HostnameRepository::class)->attach($hostname, $website);
 echo $website->hostnames; // Collection with $hostname
             </code>
         </pre>
+
+        <h6>Tenant directory structure</h6>
+
+        <p>
+            A typically, fully enabled tenant directory holds the following structure.
+        </p>
+
+        <pre v-highlightjs>
+            <code class="bash">
+config/                 // 1.
+config/cache.php
+routes.php              // 2.
+lang/                   // 3.
+lang/en/validation.php
+composer.json
+vendor/autoload.php     // 4.
+            </code>
+        </pre>
+
+        <ol>
+            <li>Any file in a config directory is merged in the global configuration settings store.</li>
+            <li>The tenant routes.php file adds new routes specific for this tenant website.</li>
+            <li>Files inside the lang folder are added to the global translations.</li>
+            <li>Additional tenant logic can be added with composer; the vendor autoloader file is added to the runtime.</li>
+        </ol>
     </div>
 </template>
