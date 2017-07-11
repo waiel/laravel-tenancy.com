@@ -29,9 +29,14 @@
 
         <pre v-highlightjs>
             <code class="bash">
-composer require hyn/multi-tenant
+composer require "hyn/multi-tenant:3.*"
             </code>
         </pre>
+
+        <v-alert info :value="true">
+            Version 3 of hyn/multi-tenant is still under development. Set "prefer-stable": true and "minimum-stability": "beta"
+            in your composer.json to download the latest beta release.
+        </v-alert>
 
         <p>
             For Laravel <strong>5.3 and 5.4</strong>, add the service provider to your <code>config/app.php</code>:
@@ -70,7 +75,6 @@ php artisan vendor:publish --tag tenancy
             Open the <code>config/tenancy.php</code> and <code>config/webserver.php</code> files. The inline documentation
             should be self explanatory to get you going.
         </p>
-
 
         <v-alert info :value="true">
             Make sure you have configured the "system" connection. In case you didn't change the default in the tenancy.php config

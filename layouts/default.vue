@@ -17,22 +17,21 @@
                                 <v-spacer></v-spacer>
                                 <v-chip label class="info">3.x</v-chip>
                             </v-toolbar>
-                            <v-list dense class="grey lighten-4">
-                                <li>
-                                    <v-btn flat nuxt exact to="/">
-                                        <v-icon mdi>home</v-icon>
-                                    </v-btn>
-                                    <v-btn v-tooltip:bottom="{html: 'View code and issues on GitHub.'}" flat tag="a" href="https://github.com/hyn/multi-tenant" target="_blank">
-                                        <v-icon mdi>github-box</v-icon>
-                                    </v-btn>
-                                    <v-btn v-tooltip:bottom="{html: 'Keep this package free, support it!'}" flat tag="a" href="https://patreon.com/tenancy" target="_blank">
-                                        <img src="/patreon.svg" type="image/svg+xml" width="24px" />
-                                    </v-btn>
-                                    <v-btn v-tooltip:bottom="{html: 'Newsletter, occasional progress updates.'}" flat tag="a" href="https://confirmsubscription.com/h/i/DB343D4781A9960C" target="_blank">
-                                        <v-icon mdi>email-alert</v-icon>
-                                    </v-btn>
-                                </li>
-                            </v-list>
+                            <div class="text-xs-center grey lighten-4">
+
+                                <v-btn flat nuxt exact to="/" v-tooltip:right="{html: 'Return to the home page.'}">
+                                    <v-icon mdi>home</v-icon>
+                                </v-btn>
+                                <v-btn v-tooltip:bottom="{html: 'View code and issues on GitHub.'}" flat tag="a" href="https://github.com/hyn/multi-tenant" target="_blank">
+                                    <v-icon mdi>github-box</v-icon>
+                                </v-btn>
+                                <v-btn v-tooltip:bottom="{html: 'Keep this package free, support it!'}" flat tag="a" href="https://patreon.com/tenancy" target="_blank">
+                                    <img src="/patreon.svg" type="image/svg+xml" width="24px" />
+                                </v-btn>
+                                <v-btn v-tooltip:left="{html: 'Newsletter, occasional progress updates.'}" flat tag="a" href="https://confirmsubscription.com/h/i/DB343D4781A9960C" target="_blank">
+                                    <v-icon mdi>email-alert</v-icon>
+                                </v-btn>
+                            </div>
                             <v-list dense class="grey lighten-4">
                                 <v-list-group v-for="route in routes" v-bind:key="route.title" nuxt :to="route.to">
                                     <v-list-tile slot="item">

@@ -13,7 +13,8 @@ module.exports = {
             }
         ],
         link: [
-            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato' }
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato' },
+            { rel: 'shortcut icon', href: '/favicon.png'}
         ]
     },
     plugins: ['~plugins/vuetify', '~plugins/highlight.js'],
@@ -21,7 +22,6 @@ module.exports = {
         { src: join(__dirname, 'css/app.styl'), lang: 'styl' },
         { src: join(__dirname, 'node_modules/mdi/css/materialdesignicons.css')}
     ],
-    cache: true,
     loading: {
         color: "#bf1e2e"
     }
