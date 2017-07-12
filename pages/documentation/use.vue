@@ -75,5 +75,34 @@ vendor/autoload.php     // 4.
             <li>Files inside the lang folder are added to the global translations.</li>
             <li>Additional tenant logic can be added with composer; the vendor autoloader file is added to the runtime.</li>
         </ol>
+
+        <h6>Retrieving information</h6>
+
+        <p>
+            To get the currently active tenant information, resolve the <code>Hyn\Tenancy\Environment</code>
+            through ioc. The Environment has several useful accessor and a setter;
+        </p>
+
+        <pre v-highlightjs>
+            <code class="php">
+$tenancy = app(Hyn\Tenancy\Environment::class);
+$tenancy->website();            // resolves the currently active website
+$tenancy->hostname();           // resolves the currently active hostname
+$tenancy->customer();           // resolves the currently active customer
+
+$tenancy->hostname($hostname);  // sets the currently active hostname
+$tenancy->identifyHostname();   // resets current hostname resolving to auto identification using request
+            </code>
+        </pre>
+
+        <p>
+            You might need to retrieve a list of websites, hostnames or customers. To support this functionality,
+            use the corresponding repositories and the <code>query()</code> method.
+        </p>
+        <ul>
+            <li><code>Hyn\Tenancy\Contracts\Repositories\CustomerRepository</code></li>
+            <li><code>Hyn\Tenancy\Contracts\Repositories\HostnameRepository</code></li>
+            <li><code>Hyn\Tenancy\Contracts\Repositories\WebsiteRepository</code></li>
+        </ul>
     </div>
 </template>
