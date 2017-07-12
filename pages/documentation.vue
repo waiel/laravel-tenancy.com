@@ -6,6 +6,13 @@
         <v-card-text>
             <nuxt-child/>
         </v-card-text>
+        <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn tag="a" flat target="_blank" :href="'https://github.com/hyn/laravel-tenancy.com/edit/master/pages/' + $route.name.replace('-', '/') + '.vue'">
+                suggest edits on GitHub
+                <v-icon mdi right>github-box</v-icon>
+            </v-btn>
+        </v-card-actions>
     </v-card>
 </template>
 <script>

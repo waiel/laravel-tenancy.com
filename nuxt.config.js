@@ -17,7 +17,10 @@ module.exports = {
             { rel: 'shortcut icon', href: '/favicon.png'}
         ]
     },
-    plugins: ['~plugins/vuetify', '~plugins/highlight.js'],
+    plugins: [
+        '~plugins/vuetify',
+        '~plugins/highlight.js'
+    ],
     css: [
         { src: join(__dirname, 'css/app.styl'), lang: 'styl' },
         { src: join(__dirname, 'node_modules/mdi/css/materialdesignicons.css')}
