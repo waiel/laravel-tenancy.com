@@ -29,7 +29,7 @@
 
         <pre v-highlightjs>
             <code class="bash">
-composer require "hyn/multi-tenant:3.*"
+composer require hyn/multi-tenant
             </code>
         </pre>
 
