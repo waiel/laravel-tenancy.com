@@ -11,7 +11,7 @@
         </ul>
 
         <v-alert info :value="true">
-            MySQL is <strong>not</strong> supported due to the database username limit of 16 characters.
+            MySQL is <strong>not</strong> supported due to the database username limit of 32 characters.
         </v-alert>
 
         <h6>Installation</h6>
