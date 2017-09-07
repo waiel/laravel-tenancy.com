@@ -22,6 +22,10 @@
             </li>
         </ul>
 
+        <p>
+            These classes are implementations of the Eloquent Model class but preconfigure the database connection.
+        </p>
+
         <h6>Events, events ..</h6>
 
         <p>

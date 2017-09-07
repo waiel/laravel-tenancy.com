@@ -3,6 +3,7 @@
         <h6>Requirements</h6>
 
         <ul>
+            <li>Laravel 5.5</li>
             <li>PHP 7.1+</li>
             <li>Linux based OS</li>
             <li>Apache 2.4+</li>
@@ -12,14 +13,6 @@
         <v-alert info :value="true">
             MySQL is <strong>not</strong> supported due to the database username limit of 16 characters.
         </v-alert>
-
-        <h6>Laravel versions</h6>
-
-        <ul>
-            <li>5.3</li>
-            <li>5.4</li>
-            <li>5.5</li>
-        </ul>
 
         <h6>Installation</h6>
 
@@ -39,23 +32,8 @@ composer require hyn/multi-tenant
         </v-alert>
 
         <p>
-            For Laravel <strong>5.3 and 5.4</strong>, add the service provider to your <code>config/app.php</code>:
-        </p>
-        <pre v-highlightjs>
-            <code class="php">
-    'providers' => [
-        // [..]
-        // Hyn multi tenancy.
-        Hyn\Tenancy\Providers\TenancyProvider::class,
-        // Hyn multi tenancy webserver integration.
-        Hyn\Tenancy\Providers\WebserverProvider::class,
-    ],
-            </code>
-        </pre>
-
-        <p>
-            Laravel <strong>5.5 and up</strong> offer
-            <a href="https://medium.com/@taylorotwell/package-auto-discovery-in-laravel-5-5-ea9e3ab20518" target="_blank">auto discovery</a>,
+            Laravel <strong>5.5 and up</strong> offers
+            <a href="https://medium.com/@taylorotwell/package-auto-discovery-in-laravel-5-5-ea9e3ab20518" target="_blank">package auto discovery</a>,
             the tenancy package will be auto detected by Laravel.
         </p>
 

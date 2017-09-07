@@ -15,7 +15,7 @@
                                     hyn/multi-tenant
                                 </v-toolbar-title>
                                 <v-spacer></v-spacer>
-                                <v-chip label class="info">3.x</v-chip>
+                                <v-chip label class="info">5.x</v-chip>
                             </v-toolbar>
                             <div class="text-xs-center grey lighten-4">
 
