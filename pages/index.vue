@@ -33,8 +33,8 @@
             >
                 <v-flex xs12 sm4 class="my-3">
                     <div class="text-xs-center">
-                        <h2 class="headline">One Laravel installation, multiple tenant apps</h2>
-                        <span class="subheading">
+                        <h2 class="headline primary--text">One Laravel installation, multiple tenant apps</h2>
+                        <span class="subheading primary--text">
                             Run multiple websites using the same laravel installation while keeping tenant specific data separated for fully independent multi-domain setups.
                         </span>
                     </div>
@@ -46,6 +46,66 @@
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <v-icon x-large class="blue--text text--lighten-2">extension</v-icon>
+                                    </v-card-text>
+                                    <v-card-title primary-title class="layout justify-center">
+                                        <div class="headline text-xs-center">Shared and separated</div>
+                                    </v-card-title>
+                                    <v-card-text class="subheading">
+                                        The unobtrusive Laravel package that makes your app multi tenant. Serving
+                                        multiple websites, each with one or more hostnames from the same codebase.
+                                        But with clear separation of assets, database and the ability to override
+                                        logic per tenant.
+                                    </v-card-text>
+                                </v-card>
+                            </v-flex>
+                            <v-flex xs12 md4>
+                                <v-card class="elevation-0 transparent">
+                                    <v-card-text class="text-xs-center">
+                                        <v-icon x-large class="blue--text text--lighten-2">explore</v-icon>
+                                    </v-card-text>
+                                    <v-card-title primary-title class="layout justify-center">
+                                        <div class="headline">Easy and flexible</div>
+                                    </v-card-title>
+                                    <v-card-text class="subheading">
+                                        Suitable for marketing companies that like to re-use functionality for
+                                        different clients or start-ups building the next software as a service.
+                                        Configure to your needs and start implementing those awesome features.
+                                    </v-card-text>
+                                </v-card>
+                            </v-flex>
+                            <v-flex xs12 md4>
+                                <v-card class="elevation-0 transparent">
+                                    <v-card-text class="text-xs-center">
+                                        <v-icon x-large class="blue--text text--lighten-2">favorite_border</v-icon>
+                                    </v-card-text>
+                                    <v-card-title primary-title class="layout justify-center">
+                                        <div class="headline text-xs-center">Open source</div>
+                                    </v-card-title>
+                                    <v-card-text class="subheading">
+                                        Free to use for any use. Commercial or not, single developer or multinational.
+                                        And if you love this package, simply support the work on
+                                        <a class="accent--text" href="https://patreon.com/tenancy" target="_blank">patreon</a>.
+                                    </v-card-text>
+                                </v-card>
+                            </v-flex>
+                        </v-layout>
+                    </v-container>
+                </v-flex>
+                <v-flex xs12 sm4 class="my-3">
+                    <div class="">
+                        <h3 class="headline">Features</h3>
+                        <span class="subheading">
+                            Run multiple websites using the same laravel installation while keeping tenant specific data separated for fully independent multi-domain setups.
+                        </span>
+                    </div>
+                </v-flex>
+                <v-flex xs12>
+                    <v-container grid-list-xl>
+                        <v-layout row wrap align-center>
+                            <v-flex xs12 md2>
+                                <v-card class="elevation-0 transparent">
+                                    <v-card-text class="text-xs-center">
+                                        <v-icon mdi x-large class="blue--text text--lighten-2">database</v-icon>
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
                                         <div class="headline text-xs-center">Shared and separated</div>

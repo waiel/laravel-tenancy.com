@@ -19,19 +19,6 @@
         <main>
 
             <nuxt/>
-
-            <v-footer class="blue darken-2">
-                <v-layout row wrap align-center>
-                    <v-flex xs12>
-                        <div class="white--text ml-3">
-                            Made with
-                            <v-icon class="red--text">favorite</v-icon>
-                            by <a class="white--text" href="https://hyn.me" target="_blank">Hyn</a>
-                            for the <a class="white--text" href="https://laravel.com" target="_blank">Laravel community</a>
-                        </div>
-                    </v-flex>
-                </v-layout>
-            </v-footer>
         </main>
     </v-app>
         <!---->
