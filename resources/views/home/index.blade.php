@@ -2,6 +2,28 @@
 
 @section('content')
     <section>
+        <v-parallax src="/image/docks.jpeg" height="600">
+            <v-layout
+                    column
+                    align-center
+                    justify-center
+                    class="white--text"
+            >
+                <a href="https://hyn.me" target="_blank"><img src="/image/hyn.png" width="30px" alt="Hyn"></a>
+                <h1 class="primary--text mb-2 display-3">Laravel tenancy</h1>
+                <div class="headline mb-3 text-xs-center secondary--text">One installation, any number of portals</div>
+                <v-btn
+                        class="accent lighten-2 mt-5"
+                        dark
+                        large
+                        href="{{ route('docs.index') }}"
+                >
+                    Get Started
+                </v-btn>
+            </v-layout>
+        </v-parallax>
+    </section>
+    <section>
         <v-layout
                 column
                 wrap
@@ -22,7 +44,7 @@
                         <v-flex xs12 md4>
                             <v-card class="elevation-0 transparent">
                                 <v-card-text class="text-xs-center">
-                                    <v-icon mdi x-large class="primary--text text--lighten-2">puzzle</v-icon>
+                                    <v-icon x-large class="primary--text text--lighten-2">mdi-puzzle</v-icon>
                                 </v-card-text>
                                 <v-card-title primary-title class="layout justify-center">
                                     <div class="headline text-xs-center">Easy, unobtrusive & flexible</div>
@@ -38,22 +60,23 @@
                         <v-flex xs12 md4>
                             <v-card class="elevation-0 transparent">
                                 <v-card-text class="text-xs-center">
-                                    <v-icon mdi x-large class="primary--text text--lighten-2">speedometer</v-icon>
+                                    <v-icon x-large class="primary--text text--lighten-2">mdi-wall</v-icon>
                                 </v-card-text>
                                 <v-card-title primary-title class="layout justify-center">
-                                    <div class="headline">For SaaS and web development agencies</div>
+                                    <div class="headline">Separation of concern</div>
                                 </v-card-title>
                                 <v-card-text>
-                                    Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                    Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
+                                    Serving multiple websites from the same Laravel installation, each with one or more
+                                    hostnames. Clear separation of assets, database and the ability to override
+                                    logic per tenant. Or make global assets, database and code available to every
+                                    tenant.
                                 </v-card-text>
                             </v-card>
                         </v-flex>
                         <v-flex xs12 md4>
                             <v-card class="elevation-0 transparent">
                                 <v-card-text class="text-xs-center">
-                                    <v-icon mdi x-large class="primary--text text--lighten-2">heart-pulse</v-icon>
+                                    <v-icon x-large class="primary--text text--lighten-2">mdi-heart-pulse</v-icon>
                                 </v-card-text>
                                 <v-card-title primary-title class="layout justify-center">
                                     <div class="headline text-xs-center">Stable & free</div>

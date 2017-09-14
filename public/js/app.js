@@ -779,9 +779,12 @@ module.exports = __webpack_require__(38);
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -792,6 +795,8 @@ __webpack_require__(10);
 
 window.Vue = __webpack_require__(35);
 
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -801,7 +806,33 @@ window.Vue = __webpack_require__(35);
 Vue.use(__webpack_require__(36));
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  computed: {
+    segments: function segments() {
+      return window.location.pathname.split('/');
+    },
+    /**
+     * Retrieves valid paths of url path segment.
+     * @returns {Array}
+     */
+    paths: function paths() {
+      var addedUp = [];
+      var results = [];
+
+      __WEBPACK_IMPORTED_MODULE_0_lodash__["forEach"](this.segments, function (segment) {
+        addedUp.push(segment);
+        var item = addedUp.join('/');
+        results.push(item);
+      });
+
+      return __WEBPACK_IMPORTED_MODULE_0_lodash__["compact"](results);
+    }
+  },
+  methods: {
+    pathStartsWith: function pathStartsWith(path) {
+      return __WEBPACK_IMPORTED_MODULE_0_lodash__["indexOf"](this.paths, path) !== -1;
+    }
+  }
 });
 
 /***/ }),

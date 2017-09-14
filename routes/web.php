@@ -11,7 +11,26 @@
 |
 */
 
+use Illuminate\Http\RedirectResponse;
+
 Route::get('/', [
     'uses' => 'HomeController@index',
     'as' => 'home.index'
 ]);
+
+Route::get('/documentation', [
+    'uses' => 'DocumentationController@index',
+    'as' => 'docs.index'
+]);
+Route::get('/documentation/{segment}', [
+    'uses' => 'DocumentationController@page',
+    'as' => 'docs.page'
+])->where(['segment' => '.*']);
+
+Route::get('/chat', function () {
+    if ($url = config('discord.invite-link')) {
+        return new RedirectResponse($url);
+    }
+
+    abort(424);
+})->name('chat');

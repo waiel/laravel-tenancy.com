@@ -42,6 +42,10 @@ return [
     */
 
     'disks' => [
+        'documentation' => [
+            'driver' => 'local',
+            'root' => base_path('resources/markdown/documentation')
+        ],
 
         'local' => [
             'driver' => 'local',

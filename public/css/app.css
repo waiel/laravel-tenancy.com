@@ -3096,7 +3096,7 @@ html {
   overflow-x: hidden;
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   line-height: 1.5;
 }
 header {
@@ -3930,7 +3930,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   -webkit-font-feature-settings: 'liga';
           font-feature-settings: 'liga';
   top: -11px;
@@ -4096,7 +4096,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   -webkit-font-feature-settings: 'liga';
           font-feature-settings: 'liga';
   top: -11px;
@@ -11822,4 +11822,13 @@ table.table tfoot tr {
     -webkit-transform: translate3d(24px, 0, 0) scale(1);
             transform: translate3d(24px, 0, 0) scale(1);
   }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.headline {
+  font-family: 'Taviraj', serif;
 }
