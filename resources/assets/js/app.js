@@ -17,6 +17,7 @@ import * as _ from 'lodash';
  */
 
 Vue.use(require('vuetify'));
+Vue.use(require('vue-highlightjs'));
 
 const app = new Vue({
   el: '#app',

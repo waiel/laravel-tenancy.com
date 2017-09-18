@@ -11,7 +11,7 @@
             >
                 <a href="https://hyn.me" target="_blank"><img src="/image/hyn.png" width="30px" alt="Hyn"></a>
                 <h1 class="primary--text mb-2 display-3">Laravel tenancy</h1>
-                <div class="headline mb-3 text-xs-center secondary--text">One installation, any number of portals</div>
+                <div class="headline mb-3 text-xs-center white--text">One installation, any number of portals</div>
                 <v-btn
                         class="accent lighten-2 mt-5"
                         dark
