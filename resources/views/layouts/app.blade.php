@@ -11,15 +11,7 @@
 <body>
 <div id="app">
     <v-app light>
-        <v-toolbar fixed class="white">
-            <v-toolbar-title>{{ config('app.name') }}</v-toolbar-title>
-
-            <v-breadcrumbs icons divider="forward">
-                <v-breadcrumbs-item v-for="(segment, i) in paths" :key="i">
-                    <a :href="segment.split('/').length !== 3 ? segment : null">@{{ _.last(segment.split('/')) }}</a>
-                </v-breadcrumbs-item>
-            </v-breadcrumbs>
-        </v-toolbar>
+        @include('layouts.navigation')
         <main>
 
 
