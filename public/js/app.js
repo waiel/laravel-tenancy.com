@@ -17986,6 +17986,16 @@ if (token) {
 //     key: 'your-pusher-key'
 // });
 
+var hljs = __webpack_require__(39);
+
+(function syntaxHighlighting() {
+
+  hljs.registerLanguage('bash', __webpack_require__(58));
+  hljs.registerLanguage('php', __webpack_require__(161));
+  hljs.registerLanguage('html', __webpack_require__(50));
+  hljs.initHighlighting();
+})();
+
 /***/ }),
 /* 12 */
 /***/ (function(module, exports) {
@@ -31727,7 +31737,7 @@ module.exports = function spread(callback) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {/*!
- * Vue.js v2.4.3
+ * Vue.js v2.4.4
  * (c) 2014-2017 Evan You
  * Released under the MIT License.
  */
@@ -36452,7 +36462,7 @@ Object.defineProperty(Vue$3.prototype, '$ssrContext', {
   }
 });
 
-Vue$3.version = '2.4.3';
+Vue$3.version = '2.4.4';
 
 /*  */
 

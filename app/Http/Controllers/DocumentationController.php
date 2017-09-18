@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DocumentationPage;
+use Exception;
+use Storage;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Spatie\YamlFrontMatter\YamlFrontMatter as Parser;
+use App\Markdown\Converter;
 
 class DocumentationController extends Controller
 {
@@ -12,18 +15,39 @@ class DocumentationController extends Controller
         return view('documentation.index');
     }
 
-    public function page(string $segments)
+    public function page(string $slug)
     {
-        $page = DocumentationPage::find($segments);
+        return view('layouts.documentation')
+            ->with($this->properties($slug));
+    }
 
-        if (!$page) {
-            throw new NotFoundHttpException($segments);
+    /**
+     * @param string $slug
+     * @return array
+     */
+    private function properties(string $slug) : array
+    {
+        try {
+            $content = Storage::disk('documentation')->get("$slug.md");
+        } catch (Exception $e) {
+            throw new NotFoundHttpException($slug);
         }
 
-        if (empty($page->title)) {
-            $page->title = last(explode('/', $segments));
+        $document = (new Parser())->parse($content);
+        $properties = $document->matter();
+
+        if (!$document->title) {
+            $properties['title'] = $this->title($slug);
         }
 
-        return view('layouts.documentation', compact('page'));
+        $properties['slug'] = $slug;
+        $properties['path'] = request()->path();
+        $properties['content'] = Converter::convert($document->body());
+        return $properties;
+    }
+
+    private function title(string $slug): string
+    {
+        return ucfirst(collect(explode('/', $slug))->last());
     }
 }

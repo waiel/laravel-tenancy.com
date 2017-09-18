@@ -11831,15 +11831,16 @@ h5,
 h6,
 .headline {
   font-family: 'Taviraj', serif;
+  position: relative;
 }
-pre {
-  padding: 0;
-  margin: -30px 0 -15px 0;
+.documentation-content ul {
+  margin: 1em;
 }
 .hljs {
   display: block;
-  background: #fff;
-  padding: 0 0.5em;
+  background: ;
+  padding: 1em 2em 0;
+  margin: 2em 0;
   color: #333;
   overflow-x: auto;
 }
@@ -11891,4 +11892,25 @@ pre {
 }
 .hljs-link {
   text-decoration: underline;
+}
+.anchor-link {
+  border: none !important;
+  color: #bf1e2e !important;
+  font-family: 'Work Sans', sans-serif;
+  display: block;
+  font-size: 0.65em;
+  font-weight: normal;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  height: 1em;
+  width: 1em;
+  text-align: right;
+  padding-right: 2rem;
+}
+.anchor-link:hover {
+  color: #ff5722 !important;
+}
+.anchor-link:before {
+  content: '#';
 }
