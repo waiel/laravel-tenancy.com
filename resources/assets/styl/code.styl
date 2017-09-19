@@ -1,9 +1,9 @@
 code
   background: $grey.base
-  color: #bd4147
+  color: $theme.primary
   display: inline-block
-  background-color: $grey.lighten-4
-  border-radius: 3px
+  background-color: $blue-grey.lighten-5
+  border-radius: 5px
   white-space: pre-wrap
   font-size: 85%
   font-weight: 100 !important
@@ -13,22 +13,22 @@ code
   &:before
     content: "\00a0"
     letter-spacing: -1px
-  &:before
-    content: ""
+
 
 /**
  * GitHub Gist Theme
  * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
  */
 
-.hljs {
+.hljs
   display: block;
   background: $colors.gray;
   padding: 1em 2em 0
   margin: 2em 0
   color: #333333;
   overflow-x: auto;
-}
+  &:before
+    content: ""
 
 .hljs-comment,
 .hljs-meta {

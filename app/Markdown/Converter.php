@@ -6,6 +6,7 @@ use League\CommonMark\Block\Element\Heading;
 use League\CommonMark\DocParser;
 use League\CommonMark\Environment;
 use League\CommonMark\HtmlRenderer;
+use League\CommonMark\Inline\Element\Link;
 
 class Converter
 {
@@ -13,6 +14,7 @@ class Converter
     {
         $environment = Environment::createCommonMarkEnvironment();
         $environment->addBlockRenderer(Heading::class, new HeadingRenderer());
+        $environment->addInlineRenderer(Link::class, new LinkRenderer());
 
         $parser = new DocParser($environment);
         $renderer = new HtmlRenderer($environment);

@@ -32,7 +32,22 @@ CREATE USER tenancy WITH CREATEDB CREATEROLE PASSWORD 'someRandomPassword';
 GRANT ALL PRIVILEGES ON tenancy to tenancy WITH GRANT OPTION;
 ```
 
+Make sure you configure this user as your system connection in your `database.php`.
+Under connections:
 
+```php
+'system' => [
+    'driver' => 'mysql', // or pgsql in case you use PostgreSQL
+    'username' => 'tenancy',
+    'database' => 'tenancy',
+    'password' => 'someRandomPassword',
+    // Remaining settings required for this specific driver.
+]
+```
+
+> There is no need to configure the `tenant` connection in the `database.php`
+configuration file. This connection is set up automatically during runtime. Pre-
+configuring this connection may cause unwanted behaviour.
 
 [1]: https://mariadb.com/kb/en/library/grant/#the-grant-option-privilege
 [2]: https://www.postgresql.org/docs/9.6/static/sql-grant.html

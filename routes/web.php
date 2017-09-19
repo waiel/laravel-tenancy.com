@@ -34,3 +34,11 @@ Route::get('/chat', function () {
 
     abort(424);
 })->name('chat');
+
+Route::get('/newsletter/signup', function () {
+    if ($url = config('newsletter.subscribe-link')) {
+        return new RedirectResponse($url);
+    }
+
+    abort(424);
+})->name('newsletter.signup');

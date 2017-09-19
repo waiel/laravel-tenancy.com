@@ -1,3 +1,11 @@
+##### System connection
+
+Tenancy needs a database connection with elevated permission to create databases
+to be used by its tenants.
+
+Make sure you set up this connection by following the instructions 
+in the [requirements][requirements].
+
 ##### Deploy files
 
 Before you can run the installation procedure, make sure you deploy the
@@ -32,3 +40,5 @@ In general you can expect the following settings for each webserver;
 - generator; the class handling the generation of vhost files.
 - disk; the disk to write the vhost files to, you can have it point to any configured disk in your `config/filesystems.php`.
 - paths; specific locations we need to know about to in order to mutate the webserver behavior.
+
+[requirements]: requirements#elevated-database-user

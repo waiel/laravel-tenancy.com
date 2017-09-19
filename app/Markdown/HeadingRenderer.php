@@ -18,7 +18,7 @@ class HeadingRenderer extends BaseHeadingRenderer
         $element->setAttribute('id', $id);
         $element->setContents(
             $element->getContents() .
-            new HtmlElement('a', ['href' => "#{$id}", 'class' => 'anchor-link'])
+            new HtmlElement('a', ['href' => "#{$id}", 'class' => 'anchor-link mdi icon'])
         );
 
         return $element;

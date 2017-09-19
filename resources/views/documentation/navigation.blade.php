@@ -91,6 +91,16 @@
         <v-card>
             <v-card-text>
                 <v-list>
+                    <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/abstracts']) }}"
+                            :value="pathStartsWith('/documentation/implementation/abstracts')">
+                        <v-list-tile-avatar>
+                            <v-icon>mdi-pipe-disconnected</v-icon>
+                        </v-list-tile-avatar>
+                        <v-list-tile-content>
+                            <v-list-tile-title>Abstract</v-list-tile-title>
+                            <v-list-tile-sub-title>Tenant and system model</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                    </v-list-tile>
                     <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/repositories']) }}"
                             :value="pathStartsWith('/documentation/implementation/repositories')">
                         <v-list-tile-avatar>
@@ -98,6 +108,7 @@
                         </v-list-tile-avatar>
                         <v-list-tile-content>
                             <v-list-tile-title>Repositories</v-list-tile-title>
+                            <v-list-tile-sub-title>Persisting system data</v-list-tile-sub-title>
                         </v-list-tile-content>
                     </v-list-tile>
                     <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/events']) }}"
@@ -107,6 +118,7 @@
                         </v-list-tile-avatar>
                         <v-list-tile-content>
                             <v-list-tile-title>Events</v-list-tile-title>
+                            <v-list-tile-sub-title>Hooks and modification</v-list-tile-sub-title>
                         </v-list-tile-content>
                     </v-list-tile>
                 </v-list>

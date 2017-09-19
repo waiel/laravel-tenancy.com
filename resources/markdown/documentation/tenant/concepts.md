@@ -20,7 +20,25 @@ This packages holds onto one core belief though; **the tenant is the website**, 
 
 ##### Website
 
-You can think as a specific mirror of the code base, re-using your default
-app code. But it is also able to have very specific logic, for instance
-routes, a vendor folder, media and language files.
+You can think of a website as a single mirror of the code base, re-using your default
+app code. In addition it is also possible to have very [tenant specific logic][directory-structure], 
+for instance routes, a vendor folder, media and language files.
 
+##### Hostname
+
+A hostname is a [Fully Qualified Domain Name][fqdn] (for instance sub.example.com).
+Your application handles incoming requests to specific hostnames. Tenancy inspects
+these requests and [sets up the tenancy environment][identification] according to a 
+matching hostname or default fallback.
+
+##### Customer
+
+A customer is the binding entity between websites and hostnames. They allow freely
+combining the two. A website and hostname can have a customer, they don't need to be
+the same by the way.
+
+> Using customers in your application is optional.
+
+[directory-structure]: structure
+[fqdn]: https://www.godaddy.com/garage/industry/tech-svcs/it/whats-a-fully-qualified-domain-name-fqdn-and-whats-it-good-for/
+[identification]: identification

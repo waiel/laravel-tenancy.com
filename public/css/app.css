@@ -11838,10 +11838,10 @@ h6,
 }
 code {
   background: #9e9e9e;
-  color: #bd4147;
+  color: #bf1e2e;
   display: inline-block;
-  background-color: #f5f5f5;
-  border-radius: 3px;
+  background-color: #eceff1;
+  border-radius: 5px;
   white-space: pre-wrap;
   font-size: 85%;
   font-weight: 100 !important;
@@ -11852,9 +11852,6 @@ code:before {
   content: "\A0";
   letter-spacing: -1px;
 }
-code:before {
-  content: "";
-}
 .hljs {
   display: block;
   background: ;
@@ -11862,6 +11859,9 @@ code:before {
   margin: 2em 0;
   color: #333;
   overflow-x: auto;
+}
+.hljs:before {
+  content: "";
 }
 .hljs-comment,
 .hljs-meta {
@@ -11913,11 +11913,9 @@ code:before {
   text-decoration: underline;
 }
 .anchor-link {
-  border: none !important;
   color: #bf1e2e !important;
-  font-family: 'Work Sans', sans-serif;
   display: block;
-  font-size: 0.65em;
+  font-size: 0.75em;
   font-weight: normal;
   position: absolute;
   right: 100%;
@@ -11926,10 +11924,21 @@ code:before {
   width: 1em;
   text-align: right;
   padding-right: 2rem;
+  text-decoration: none;
 }
 .anchor-link:hover {
   color: #ff5722 !important;
 }
 .anchor-link:before {
-  content: '#';
+  content: "\F0C3";
+}
+.documentation-content blockquote {
+  border-left: 5px solid #ff5722;
+  color: #165176;
+  margin: 2em;
+  font-size: 1.1em;
+  padding: 4px 24px 4px 24px;
+}
+.documentation-content blockquote p {
+  margin-bottom: 0;
 }

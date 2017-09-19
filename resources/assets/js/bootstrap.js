@@ -64,3 +64,18 @@ const hljs = require('highlight.js/lib/highlight');
   hljs.initHighlighting();
 
 })();
+
+const anchoring = require('anchor-scroll');
+anchoring.init({
+  updateUrl: true,
+  offset: -100,
+  selector: '.anchor-link'
+})
+
+const scrollTo = require('scroll-to-element');
+
+if (location.hash) {
+  scrollTo(location.hash, {
+    offset: -100
+  })
+}

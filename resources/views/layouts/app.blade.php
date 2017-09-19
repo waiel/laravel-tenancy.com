@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="{{ mix('/css/materialdesignicons.css') }}">
     <link href="/image/favicon.png" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Taviraj|Work+Sans|Material+Icons" rel="stylesheet">
+    @if(app()->environment('production'))
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106781545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106781545-1');
+    </script>
+    @endif
 </head>
 <body>
 <div id="app">
