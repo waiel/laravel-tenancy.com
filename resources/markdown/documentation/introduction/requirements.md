@@ -1,3 +1,5 @@
+##### System requirements
+
 - [Laravel 5.5](https://laravel.com/docs/5.5), because it is a long term support version.
 - PHP 7.0 or up.
 - Preferably ubuntu. But most linux-based operating systems should work.
@@ -5,3 +7,32 @@
 - MariaDB 10+ or PostgreSQL 9+.
 Please note that MySQL is not supported per default due to username and database length limits
 of 32 characters. A work around is available though.
+
+##### Elevated database user
+
+Tenancy requires a system connection that allows creating new databases for her
+tenants. In order to do so we need to have a database user with elevated
+permissions.
+
+A user for both [MariaDB][1] and [PostgreSQL][2] would require the "GRANT OPTION" to be
+applied. You can either use the root user (for PostgreSQL that is user postgres) or create
+your own (recommended):
+
+For MariaDB:
+```mysql
+CREATE DATABASE IF NOT EXISTS tenancy;
+CREATE USER IF NOT EXISTS tenancy IDENTIFIED BY 'someRandomPassword';
+GRANT ALL PRIVILEGES ON *.* TO tenancy@localhost WITH GRANT OPTION;
+```
+
+For PostgreSQL:
+```postgresql
+CREATE DATABASE tenancy;
+CREATE USER tenancy WITH CREATEDB CREATEROLE PASSWORD 'someRandomPassword';
+GRANT ALL PRIVILEGES ON tenancy to tenancy WITH GRANT OPTION;
+```
+
+
+
+[1]: https://mariadb.com/kb/en/library/grant/#the-grant-option-privilege
+[2]: https://www.postgresql.org/docs/9.6/static/sql-grant.html

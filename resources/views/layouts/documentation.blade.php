@@ -8,7 +8,9 @@
                 justify-center
                 class="primary--text"
         >
-            <h1 class="mb-2 mt-4 display-3">{{ $title }}</h1>
+            <h1 class="mb-2 mt-4 display-2">
+                {{ $title }}
+            </h1>
         </v-layout>
     </section>
 
@@ -19,7 +21,21 @@
             </v-flex>
             <v-flex xs11 md6 offset-md1>
                 <v-card raised>
+                    @if(config('github.documentation-repo-url'))
                     <v-card-text class="pa-5 documentation-content">
+                        <v-btn
+                                href="{{ config('github.documentation-repo-url') }}/tree/master/resources/markdown/documentation/{{ $slug }}.md"
+                                small
+                                absolute
+                                fab
+                                top
+                                right
+                                secondary
+                                v-tooltip:left="{ html: 'Suggest edits on GitHub' }"
+                        >
+                            <v-icon class="white--text">mdi-github-box</v-icon>
+                        </v-btn>
+                        @endif
                         {!! $content !!}
                     </v-card-text>
                 </v-card>
