@@ -11,13 +11,6 @@
 
     <v-spacer></v-spacer>
 
-    @if(request()->route()->getName() !== 'home.index')
-    <v-btn flat href="{{ route('home.index') }}">
-        <v-icon>mdi-chevron-double-left</v-icon>
-        <span>home</span>
-    </v-btn>
-    @endif
-
     <v-btn flat href="{{ route('docs.index') }}">
         <v-icon>mdi-book-open-page-variant</v-icon>
         <span>documentation</span>

@@ -15,10 +15,10 @@
 
     <section class="mt-1 mb-4">
         <v-layout row>
-            <v-flex xs1 offset-md1 md2>
+            <v-flex offset-md1 md2 hidden-xs-only>
                 @include('documentation.navigation')
             </v-flex>
-            <v-flex xs11 md6 offset-md1>
+            <v-flex xs12 md6 offset-md1>
                 <v-card raised>
                     @if(config('github.documentation-repo-url'))
                     <v-card-text class="pa-5 documentation-content">
