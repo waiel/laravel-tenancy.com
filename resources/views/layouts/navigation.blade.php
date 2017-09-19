@@ -1,5 +1,7 @@
 <v-toolbar fixed class="white">
-    <v-toolbar-title class="hidden-sm-and-down">{{ config('app.name') }}</v-toolbar-title>
+    <v-toolbar-title class="hidden-sm-and-down">
+        <v-btn primary flat href="{{ route('home.index') }}">{{ config('app.name') }}</v-btn>
+    </v-toolbar-title>
 
     <v-breadcrumbs icons divider="forward" class="hidden-sm-and-down">
         <v-breadcrumbs-item v-for="(segment, i) in paths" :key="i">

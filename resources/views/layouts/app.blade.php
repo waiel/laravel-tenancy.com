@@ -19,11 +19,10 @@
     @endif
 </head>
 <body>
-<div id="app">
+<div id="app" v-cloak>
     <v-app light>
         @include('layouts.navigation')
         <main>
-
 
             @yield('content')
 
