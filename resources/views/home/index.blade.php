@@ -82,9 +82,9 @@
                                     <div class="headline text-xs-center">Stable & free</div>
                                 </v-card-title>
                                 <v-card-text>
-                                    Tenancy will remain free to use for any commercial and non-commercial use under
+                                    Tenancy will remain free to use for any commercial and non-commercial project due to
                                     the MIT license. No license changes will be introduced for this or future versions
-                                    of this package. This package is well tested, her features and requirements are
+                                    of this package. Being well tested, her features and requirements are
                                     covered using continuous integration tests.
                                 </v-card-text>
                             </v-card>
