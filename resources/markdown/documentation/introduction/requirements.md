@@ -22,7 +22,7 @@ your own (recommended):
 For MariaDB:
 ```mysql
 CREATE DATABASE IF NOT EXISTS tenancy;
-CREATE USER IF NOT EXISTS tenancy IDENTIFIED BY 'someRandomPassword';
+CREATE USER IF NOT EXISTS tenancy@localhost IDENTIFIED BY 'someRandomPassword';
 GRANT ALL PRIVILEGES ON *.* TO tenancy@localhost WITH GRANT OPTION;
 ```
 
