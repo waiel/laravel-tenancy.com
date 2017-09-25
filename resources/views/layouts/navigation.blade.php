@@ -3,7 +3,7 @@
         <v-btn primary flat href="{{ route('home.index') }}">{{ config('app.name') }}</v-btn>
     </v-toolbar-title>
 
-    <v-breadcrumbs icons divider="forward" class="hidden-sm-and-down">
+    <v-breadcrumbs icons divider="forward" class="hidden-md-and-down">
         <v-breadcrumbs-item v-for="(segment, i) in paths" :key="i">
             <a :href="segment.split('/').length !== 3 ? segment : null">@{{ _.last(segment.split('/')) }}</a>
         </v-breadcrumbs-item>
@@ -13,7 +13,7 @@
 
     <v-btn flat href="{{ route('docs.index') }}">
         <v-icon>mdi-book-open-page-variant</v-icon>
-        <span>documentation</span>
+        <span class="hidden-md-and-down">documentation</span>
     </v-btn>
 
     @if(config('newsletter.subscribe-link'))
@@ -23,7 +23,7 @@
                 v-tooltip:left="{ html: 'Stay tuned, subscribe to the newsletter' }"
         >
             <v-icon>mdi-email-alert</v-icon>
-            <span>newsletter</span>
+            <span class="hidden-md-and-down">newsletter</span>
         </v-btn>
     @endif
 
@@ -34,7 +34,7 @@
             v-tooltip:left="{ html: 'Join the chat on Discord' }"
         >
             <v-icon>mdi-discord</v-icon>
-            <span>chat</span>
+            <span class="hidden-md-and-down">chat</span>
         </v-btn>
     @endif
 </v-toolbar>
