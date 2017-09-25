@@ -111,6 +111,16 @@
                             <v-list-tile-sub-title>Persisting system data</v-list-tile-sub-title>
                         </v-list-tile-content>
                     </v-list-tile>
+                    <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/migrations']) }}"
+                            :value="pathStartsWith('/documentation/implementation/migrations')">
+                        <v-list-tile-avatar>
+                            <v-icon>mdi-database-plus</v-icon>
+                        </v-list-tile-avatar>
+                        <v-list-tile-content>
+                            <v-list-tile-title>Migrations</v-list-tile-title>
+                            <v-list-tile-sub-title>Running database changes</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                    </v-list-tile>
                     <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/events']) }}"
                             :value="pathStartsWith('/documentation/implementation/events')">
                         <v-list-tile-avatar>
