@@ -135,4 +135,23 @@
             </v-card-text>
         </v-card>
     </v-expansion-panel-content>
+    <v-expansion-panel-content :value="pathStartsWith('/documentation/webserver'){{ $open or false ? ' || true' : '' }}">
+        <div slot="header">Webserver</div>
+        <v-card>
+            <v-card-text>
+                <v-list>
+                    <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'webserver/apache']) }}"
+                            :value="pathStartsWith('/documentation/webserver/apache')">
+                        <v-list-tile-avatar>
+                            <v-icon>mdi-server-plus</v-icon>
+                        </v-list-tile-avatar>
+                        <v-list-tile-content>
+                            <v-list-tile-title>Apache</v-list-tile-title>
+                            <v-list-tile-sub-title>Natively integrate with Apache</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                    </v-list-tile>
+                </v-list>
+            </v-card-text>
+        </v-card>
+    </v-expansion-panel-content>
 </v-expansion-panel>

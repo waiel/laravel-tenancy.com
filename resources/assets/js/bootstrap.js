@@ -61,6 +61,8 @@ const hljs = require('highlight.js/lib/highlight');
   hljs.registerLanguage('html', require('highlight.js/lib/languages/xml'));
   hljs.registerLanguage('mysql', require('highlight.js/lib/languages/sql'));
   hljs.registerLanguage('postgresql', require('highlight.js/lib/languages/sql'));
+  hljs.registerLanguage('apacheconfig', require('highlight.js/lib/languages/apache'));
+  hljs.registerLanguage('nginxconfig', require('highlight.js/lib/languages/nginx'));
   hljs.initHighlighting();
 
 })();

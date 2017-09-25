@@ -1,0 +1,22 @@
+##### Configuration
+
+Tenancy natively integrates with the Apache webserver. For that to work you need
+to do a minor configuration.
+
+Edit the `/etc/apache2/apache2.conf` and just below the last `IncludeOptional` statement
+add:
+
+```apacheconfig
+IncludeOptional <path>
+```
+
+Where `<path>` has to be replaced by the location of your vhost files.
+
+> Your vhost files are saved by default inside the `storage/app/tenancy/webserver/apache` and
+can be reconfigured in the `webserver.php` configuration file.
+
+Make sure to reload apache afterwards:
+
+```bash
+sudo apache2ctl graceful
+```
