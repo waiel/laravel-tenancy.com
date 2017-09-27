@@ -3,7 +3,7 @@
 - [Laravel 5.5](https://laravel.com/docs/5.5), because it is a long term support version.
 - PHP 7.0 or up.
 - Preferably Ubuntu. But most linux-based operating systems should work.
-- Apache 2.4+.
+- Apache 2.4+ or Nginx 1.12+.
 - MySQL 5.7+, MariaDB 10+ or PostgreSQL 9+.
 
 > Please note that MySQL limits username and database length to 32, 
