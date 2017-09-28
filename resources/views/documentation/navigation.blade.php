@@ -111,14 +111,14 @@
                             <v-list-tile-sub-title>Persisting system data</v-list-tile-sub-title>
                         </v-list-tile-content>
                     </v-list-tile>
-                    <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/directory']) }}"
-                            :value="pathStartsWith('/documentation/implementation/directory')">
+                    <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/filesystem']) }}"
+                            :value="pathStartsWith('/documentation/implementation/filesystem')">
                         <v-list-tile-avatar>
                             <v-icon>mdi-file-tree</v-icon>
                         </v-list-tile-avatar>
                         <v-list-tile-content>
-                            <v-list-tile-title>Directory</v-list-tile-title>
-                            <v-list-tile-sub-title>Mutating tenant directory</v-list-tile-sub-title>
+                            <v-list-tile-title>Filesystem</v-list-tile-title>
+                            <v-list-tile-sub-title>Mutating tenant directories</v-list-tile-sub-title>
                         </v-list-tile-content>
                     </v-list-tile>
                     <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/migrations']) }}"
