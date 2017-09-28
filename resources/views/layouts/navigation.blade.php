@@ -16,6 +16,15 @@
         <span class="hidden-md-and-down">documentation</span>
     </v-btn>
 
+    <v-btn
+            flat
+            href="https://github.com/hyn/multi-tenant" target="_blank"
+            v-tooltip:left="{ html: 'Checkout the source code' }"
+    >
+        <v-icon>mdi-github-face</v-icon>
+        <span class="hidden-md-and-down">GitHub</span>
+    </v-btn>
+
     @if(config('newsletter.subscribe-link'))
         <v-btn
                 flat
