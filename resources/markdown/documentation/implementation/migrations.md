@@ -4,11 +4,12 @@ for tenants have been given their own namespace `tenancy:`.
 
 ##### About the database/migrations path
 
-It's not wise to store the tenant specific migrations inside your global
-database/migrations directory. Laravel by default runs these migrations
+It's not wise to store the tenants migrations inside your global
+`database/migrations` directory. Laravel by default runs these migrations
 when calling the `php artisan migrate` command. Even though you can suggest
 a connection during that command, it's much cleaner to store these migrations
-inside your tenancy directory, eg `storage/app/tenancy/migrations` for instance.
+inside a separate directory, e.g. `database/tenancy/migrations`. 
+The migrations for the system database can stay in `database/migrations`.
 
 ##### Default migrations for new tenants
 
