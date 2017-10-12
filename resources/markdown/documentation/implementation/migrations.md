@@ -16,3 +16,25 @@ The migrations for the system database can stay in `database/migrations`.
 If you want new tenants to be migrated by default, you can easily do so. In
 your `tenancy.php` configuration set `db > tenant-migrations-path` to a valid
 path and all your new tenants will run these migrations per default.
+
+
+##### Default seeds for newly auto-migrated tenants
+
+In case you would also like to seed the databases of your newly created
+and migrated tenants, you can enable `db > tenant-seed-class` in your `tenancy.php`
+configuration file. Change this setting to a fully namespaced class name
+and the package will automatically run this seed after it has ran the
+automatic migrations.
+
+##### Migration related commands
+
+Obviously tenancy is also able to run migrations running through artisan.
+
+Each of the native Laravel migrate and seed command has its tenancy
+counterpart, for instance.
+
+- `tenancy:migrate`
+- `tenancy:db:seed`
+
+Please check their separate signatures for more information of valid arguments
+and options.
