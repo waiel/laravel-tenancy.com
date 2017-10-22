@@ -15,8 +15,13 @@ The migrations for the system database can stay in `database/migrations`.
 
 If you want new tenants to be migrated by default, you can easily do so. In
 your `tenancy.php` configuration set `db > tenant-migrations-path` to a valid
-path and all your new tenants will run these migrations per default.
+absolute path and all your new tenants will run these migrations per default.
 
+```php
+  // ..
+  "tenant-migrations-path" => database_path('tenancy/migrations'),
+  // ..
+```
 
 ##### Default seeds for newly auto-migrated tenants
 
