@@ -43,3 +43,7 @@ counterpart, for instance.
 
 Please check their separate signatures for more information of valid arguments
 and options.
+
+> Running tenancy:migrate without any path or realpath option and 
+without having configured tenant-migration-path will migrate your 
+tenants with the files inside the database/migrations directory. 

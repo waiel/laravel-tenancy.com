@@ -91,14 +91,14 @@
         <v-card>
             <v-card-text>
                 <v-list>
-                    <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/abstracts']) }}"
-                            :value="pathStartsWith('/documentation/implementation/abstracts')">
+                    <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/models']) }}"
+                            :value="pathStartsWith('/documentation/implementation/models')">
                         <v-list-tile-avatar>
                             <v-icon>mdi-pipe-disconnected</v-icon>
                         </v-list-tile-avatar>
                         <v-list-tile-content>
-                            <v-list-tile-title>Abstract</v-list-tile-title>
-                            <v-list-tile-sub-title>Tenant and system model</v-list-tile-sub-title>
+                            <v-list-tile-title>Models</v-list-tile-title>
+                            <v-list-tile-sub-title>Tenant and system models</v-list-tile-sub-title>
                         </v-list-tile-content>
                     </v-list-tile>
                     <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/repositories']) }}"
