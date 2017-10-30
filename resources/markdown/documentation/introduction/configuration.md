@@ -32,45 +32,6 @@ website, but also how database connections are set up. In addition it allows for
 - on what disk (see `config/filesystems.php`) to store the tenant specific files.
 - and much, much more.
 
-**Models**
-
-This package allows you to specify different models to be used for the Customer, Hostname and Website models. Tenancy will take care of the relationships on the package-end. You also need to implement `Hyn\Tenancy\Contracts\{Model}`
-
-For example, adding billing from `laravel/cashier`:
-
-```php
-<?php
-
-namespace App;
-
-use Hyn\Tenancy\Contracts\Customer as Contract;
-use Laravel\Cashier\Billable;
-
-class Customer extends Authenticatable implements Contract
-{
-  use Billable;
-}
-```
-
-All you need to do is update the `tenancy.php` configuration file:
-
-```php
-<?php
-return [
-  'models' => [
-      // ..
-      
-      // Must implement \Hyn\Tenancy\Contracts\Customer
-      'customer' => \App\Customer::class,
-      // Must implement \Hyn\Tenancy\Contracts\Hostname
-      'hostname' => \Hyn\Tenancy\Models\Hostname::class,
-      // Must implement \Hyn\Tenancy\Contracts\Website
-      'website' => \Hyn\Tenancy\Models\Website::class
-  ],
-  // ...
-];
-```
-
 ###### webserver.php
 
 With the webserver.php one can more closely fine tune integration of this package with your webserver.
