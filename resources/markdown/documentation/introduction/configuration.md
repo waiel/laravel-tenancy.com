@@ -3,19 +3,23 @@
 Tenancy needs a database connection with elevated permission to create databases
 to be used by its tenants.
 
-Make sure you set up this connection by following the instructions 
+Make sure you set up this connection by following the instructions
 in the [requirements][requirements].
 
-##### Deploy files
+##### Configuration Files
 
-Before you can run the installation procedure, make sure you deploy the
-tenancy configuration files. There are two of them (tenancy.php and webserver.php);
-
+The files are automatically added by the installation command:
 ```bash
-php artisan vendor:publish --tag tenancy
+php artisan tenancy:install
 ```
 
-The inline documentation in both files should be self explanatory. Nevertheless, 
+If you are upgrading and need to add new migrations, you can use this command:
+
+```bash
+php artisan vendor:publish --tag=tenancy
+```
+
+The inline documentation in both files should be self explanatory. Nevertheless,
 I've listed some of the basic settings below.
 
 ###### tenancy.php
@@ -27,6 +31,45 @@ website, but also how database connections are set up. In addition it allows for
 - manual tenant identification.
 - on what disk (see `config/filesystems.php`) to store the tenant specific files.
 - and much, much more.
+
+**Models**
+
+This package allows you to specify different models to be used for the Customer, Hostname and Website models. Tenancy will take care of the relationships on the package-end. You also need to implement `Hyn\Tenancy\Contracts\{Model}`
+
+For example, adding billing from `laravel/cashier`:
+
+```php
+<?php
+
+namespace App;
+
+use Hyn\Tenancy\Contracts\Customer as Contract;
+use Laravel\Cashier\Billable;
+
+class Customer extends Authenticatable implements Contract
+{
+  use Billable;
+}
+```
+
+All you need to do is update the `tenancy.php` configuration file:
+
+```php
+<?php
+return [
+  'models' => [
+      // ..
+      
+      // Must implement \Hyn\Tenancy\Contracts\Customer
+      'customer' => \App\Customer::class,
+      // Must implement \Hyn\Tenancy\Contracts\Hostname
+      'hostname' => \Hyn\Tenancy\Models\Hostname::class,
+      // Must implement \Hyn\Tenancy\Contracts\Website
+      'website' => \Hyn\Tenancy\Models\Website::class
+  ],
+  // ...
+];
+```
 
 ###### webserver.php
 
