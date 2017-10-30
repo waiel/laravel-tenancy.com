@@ -58,5 +58,5 @@ Eg, storing a file `media/bg.jpg` will allow you to use `/media/bg.jpg` inside
 your html. This applies to any file you store.
 
 > An alias is set up binding the private tenant media directory to the public
-media directory. This is implemented using through the auto generated web server
+media directory. This is implemented using the auto generated web server
 configuration files.
