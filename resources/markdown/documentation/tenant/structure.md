@@ -45,8 +45,8 @@ be loaded during runtime. Using that specific file allows you to fully
 utilize the power of composer inside your tenant directories.
 
 > Please be aware that no compatibility checks are executed against your app.
-Identifying whether a conflict could happen is something you should test
-outside of production environments.
+Identifying whether a composer conflict could happen is something you should test
+outside production environments.
 
 ###### Media
 
