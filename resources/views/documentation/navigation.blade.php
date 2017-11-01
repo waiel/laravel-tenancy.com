@@ -160,6 +160,16 @@
                             <v-list-tile-sub-title>Natively integrate with Apache</v-list-tile-sub-title>
                         </v-list-tile-content>
                     </v-list-tile>
+                    <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'webserver/nginx']) }}"
+                            :value="pathStartsWith('/documentation/webserver/nginx')">
+                        <v-list-tile-avatar>
+                            <v-icon>mdi-server-plus</v-icon>
+                        </v-list-tile-avatar>
+                        <v-list-tile-content>
+                            <v-list-tile-title>Nginx</v-list-tile-title>
+                            <v-list-tile-sub-title>Natively integrate with Nginx</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                    </v-list-tile>
                 </v-list>
             </v-card-text>
         </v-card>
