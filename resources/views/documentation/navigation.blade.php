@@ -174,4 +174,23 @@
             </v-card-text>
         </v-card>
     </v-expansion-panel-content>
+    <v-expansion-panel-content :value="pathStartsWith('/documentation/tutorials'){{ $open or false ? ' || true' : '' }}">
+        <div slot="header">Tutorials</div>
+        <v-card>
+            <v-card-text>
+                <v-list>
+                    <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'tutorials/spatie-laravel-permission']) }}"
+                            :value="pathStartsWith('/documentation/tutorials/spatie-laravel-permission')">
+                        <v-list-tile-avatar>
+                            <v-icon>mdi-bookmark-plus</v-icon>
+                        </v-list-tile-avatar>
+                        <v-list-tile-content>
+                            <v-list-tile-title>Spatie Permission</v-list-tile-title>
+                            <v-list-tile-sub-title>Integrate spatie/laravel-permission</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                    </v-list-tile>
+                </v-list>
+            </v-card-text>
+        </v-card>
+    </v-expansion-panel-content>
 </v-expansion-panel>
