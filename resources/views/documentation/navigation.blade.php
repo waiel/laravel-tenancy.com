@@ -131,6 +131,16 @@
                             <v-list-tile-sub-title>Running database changes</v-list-tile-sub-title>
                         </v-list-tile-content>
                     </v-list-tile>
+                    <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/connections']) }}"
+                            :value="pathStartsWith('/documentation/implementation/connections')">
+                        <v-list-tile-avatar>
+                            <v-icon>mdi-database</v-icon>
+                        </v-list-tile-avatar>
+                        <v-list-tile-content>
+                            <v-list-tile-title>Database connections</v-list-tile-title>
+                            <v-list-tile-sub-title>Tenant and system connections</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                    </v-list-tile>
                     <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/events']) }}"
                             :value="pathStartsWith('/documentation/implementation/events')">
                         <v-list-tile-avatar>
