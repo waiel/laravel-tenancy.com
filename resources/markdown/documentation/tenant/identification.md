@@ -10,20 +10,19 @@ reasons why the tenancy configuration file has the `hostname > auto-identificati
 setting. Turn it off to implement your own tenancy identification.
 
 Manual identification is pretty straightforward. Take for example the following
-snippet for a custom (app) service provider: 
+snippet for a custom (app) service provider:
 
 ```php
-public function boot() 
+public function boot()
 {
     $environment = $this->app->make(\Hyn\Tenancy\Environment::class);
-    
+
     // Retrieve your hostname
-    
+
     // Now switch the environment to a new tenant.
     $environment->hostname($hostname);
 }
 ```
 
 > Be wary about switching tenants. I recommend switching only once during code
-execution. Use a background job and the migration connection to run mass changes
-on tenant databases.
+execution. Use a background job to run mass changes on tenant databases.
