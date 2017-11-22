@@ -141,6 +141,16 @@
                             <v-list-tile-sub-title>Tenant and system connections</v-list-tile-sub-title>
                         </v-list-tile-content>
                     </v-list-tile>
+                    <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/queues']) }}"
+                            :value="pathStartsWith('/documentation/implementation/queues')">
+                        <v-list-tile-avatar>
+                            <v-icon>mdi-pipe</v-icon>
+                        </v-list-tile-avatar>
+                        <v-list-tile-content>
+                            <v-list-tile-title>Queues</v-list-tile-title>
+                            <v-list-tile-sub-title>Tenant aware jobs</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                    </v-list-tile>
                     <v-list-tile avatar href="{{ route('docs.page', ['segment' => 'implementation/events']) }}"
                             :value="pathStartsWith('/documentation/implementation/events')">
                         <v-list-tile-avatar>
