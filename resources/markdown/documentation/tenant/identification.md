@@ -3,6 +3,14 @@ tenancy environment holds one single responsibility, which is telling our code
 what hostname was currently identified and resolving the related website and
 customer.
 
+##### Early identification
+
+By default tenancy will identify the tenant after all Middleware has been processed.
+Previously when could simply resolve the Environment class through the container
+to force identification of the tenant early on. If you want the package to handle
+this on your behalf you can now simply enable the `early-identification` flag in
+ your `tenancy.php` configuration file under `hostname`.
+
 ##### Manual identification
 
 The environment can be used to manually set any active tenant. This is one of the
