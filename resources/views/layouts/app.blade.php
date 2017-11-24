@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>{{ config('app.name') }}</title>
+    <meta name="description" content="Laravel tenancy: multiple websites using the same laravel installation while keeping tenant specific data separated for fully independant multi-domain setups.">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('/css/materialdesignicons.css') }}">
