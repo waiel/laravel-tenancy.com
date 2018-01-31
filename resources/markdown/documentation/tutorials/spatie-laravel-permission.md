@@ -49,7 +49,7 @@ class Role extends SpatieRole
 }
 ```
 
-`App\User.php` - notice the `HasRoles`, `UserTenantConnection` traits we added.
+`App\User.php` - notice the `HasRoles`, `UsesTenantConnection` traits we added.
 ```php
 <?php
 
